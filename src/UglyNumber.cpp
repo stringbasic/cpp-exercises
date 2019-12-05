@@ -16,6 +16,8 @@ UglyNumber::~UglyNumber() {
 }
 
 bool UglyNumber::isUglyNumber(int n) {
+  if (n <= 0)
+    return false;
   while (n != 1) 
   {  
     if (n % 5 == 0) 
