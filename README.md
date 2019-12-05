@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/stringbasic/cpp-exercises.svg?branch=master)](https://travis-ci.org/stringbasic/cpp-exercises)
+[![codecov](https://codecov.io/gh/stringbasic/cpp-exercises/branch/master/graph/badge.svg)](https://codecov.io/gh/stringbasic/cpp-exercises)
 
 # To compile
 ```

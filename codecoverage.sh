@@ -10,7 +10,7 @@ make -C _builds/ test
 
 mkdir -p coverage
 cd coverage
-for sourceFile in ../src/*.cpp
+for sourceFile in ../src/[A-Z]*.cpp
 do
   filename=$(basename "$sourceFile")
   gcov -n -o ../_builds/tests_out/CMakeFiles/cpp_exercises_tests.dir/__/src/$filename.gcno $sourceFile
