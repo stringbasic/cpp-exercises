@@ -8,6 +8,17 @@ cmake --build _builds --config Release
 
 # To test
 ```
-./_builds/tests_out/cpp_exercises_tests
+make -C _builds/ test
+```
+
+# To run
+```
+./_builds/out/runner
+
+
+ Check whether a given number is an Ugly number:
+----------------------------------------------------
+Input an integer number: 25
+It is an Ugly number.
 ```
 
