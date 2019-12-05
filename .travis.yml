@@ -1,0 +1,12 @@
+language: cpp
+dist: bionic
+compiler:
+  - g++
+os:
+  - linux
+install:
+  - cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Release
+  - cmake --build _builds --config Release
+script:
+  - make -C _builds/ test
+
