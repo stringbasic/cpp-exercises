@@ -23,3 +23,8 @@ Input an integer number: 25
 It is an Ugly number.
 ```
 
+# How to execute code coverage
+```
+./codecoverage.sh
+```
+

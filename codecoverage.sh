@@ -23,4 +23,5 @@ genhtml -o coverage -t "CPPExercises test coverage" --num-spaces 4 coverage.info
 # executed by CI on success:
 # bash <(curl -s https://codecov.io/bash)
 
-
+indexFile=$(ls $(pwd)/coverage/*index.html)
+echo "Check your code coverage results details in file://$indexFile"
