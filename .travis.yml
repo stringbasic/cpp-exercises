@@ -4,6 +4,9 @@ compiler:
   - g++
 os:
   - linux
+addons:
+  apt:
+    packages: lcov
 cache:
   directories:
     - /home/travis/.hunter
