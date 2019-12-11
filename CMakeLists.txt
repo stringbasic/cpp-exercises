@@ -13,8 +13,8 @@ project(cpp-exercises LANGUAGES C CXX)
 
 hunter_add_package(GTest)
 
-# Add support to c++14
-set(CMAKE_CXX_STANDARD 14)
+# Add support to c++17
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 

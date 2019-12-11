@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#mkdir /tmp/covertests
-#cp -R . /tmp/covertests
-#cd /tmp/covertests
-
 cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Debug
 cmake --build _builds --config Debug
 make -C _builds/ test
