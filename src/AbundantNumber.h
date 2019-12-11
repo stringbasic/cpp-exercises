@@ -13,7 +13,7 @@ namespace cppexercises {
   public:
     AbundantNumber();
     ~AbundantNumber();
-    bool isAbundantNumber(int) { return true; };
+    bool isAbundantNumber(int);
 
   private:
     /* data */
