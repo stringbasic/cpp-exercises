@@ -31,12 +31,14 @@ bool AbundantNumber::isAbundantNumber(int number) {
 }
 
 bool AbundantNumber::isAbundantNumberRecursive(const int &number) {
-  return this->recursiveNumberAbundance(number, sqrt(number)) > number;
+  return this->recursiveNumberAbundance(number, sqrt(number)) > 0;
 }
 
 int AbundantNumber::recursiveNumberAbundance(const int &number, const int &divisor) {
-  if (divisor <= 1)
-    return divisor;
+  if (divisor < 1)
+    return 0;
+  if (divisor == 1)
+    return -1 * number;
   if (number%divisor == 0) {
     // if n/d1 = d2 then n/d2 = d1, d1 and d2 need to be added
     // if d1 == d2, then only one division takes place
