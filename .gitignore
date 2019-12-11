@@ -1,3 +1,4 @@
 _builds
 coverage
 coverage.info
+*.swp
