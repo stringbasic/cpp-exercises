@@ -11,6 +11,8 @@ TEST(Numbers, IsAbundantNumber) {
     for (;j<=i;j++) {
       EXPECT_EQ(j==i, abundantNumber.isAbundantNumber(j))
         << "is abundant failed for " << j << ", should be " << (j==i);
+      EXPECT_EQ(j==i, abundantNumber.isAbundantNumberRecursive(j))
+        << "is abundant recursive failed for " << j << ", should be " << (j==i);
     }
   }
 }

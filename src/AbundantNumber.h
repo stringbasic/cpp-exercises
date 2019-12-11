@@ -14,6 +14,8 @@ namespace cppexercises {
     AbundantNumber();
     ~AbundantNumber();
     bool isAbundantNumber(int);
+    bool isAbundantNumberRecursive(const int& n);
+    int abundantNumberRecursive(const int& n, const int& d=-1);
 
   private:
     /* data */
