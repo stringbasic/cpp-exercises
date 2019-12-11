@@ -9,7 +9,8 @@ TEST(Numbers, IsAbundantNumber) {
   int j=0;
   for (auto& i : abundantNumbers) {
     for (;j<=i;j++) {
-      EXPECT_EQ(j==i, abundantNumber.isAbundantNumber(j));
+      EXPECT_EQ(j==i, abundantNumber.isAbundantNumber(j))
+        << "is abundant failed for " << j << ", should be " << (j==i);
     }
   }
 }
