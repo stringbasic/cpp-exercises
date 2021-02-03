@@ -13,12 +13,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Cache hunter files
+        id: cache-hunter
+        uses: actions/cache@v2
+        with:
+          path: ~/.hunter
+          key: ${{ runner.os }}-hunter
+
       - name: Install dependencies
         run: sudo apt install lcov
-      - name: Build code
-        run: |
-          cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Release
-          cmake --build _builds --config Release
-      - name: Run tests
-        run: make -C _builds/ test
+
+      - name: Run coverage
+        run: ./codecoverage.sh
 
