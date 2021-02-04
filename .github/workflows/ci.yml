@@ -13,6 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        fetch-depth: '0'
+
+      - uses: mstachniuk/ci-skip@v1
+        with:
+          fail-fast: true
 
       - name: Cache hunter files
         id: cache-hunter
