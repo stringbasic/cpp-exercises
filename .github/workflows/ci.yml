@@ -18,7 +18,6 @@ jobs:
 
       - uses: mstachniuk/ci-skip@v1
         with:
-          fail-fast: true
           commit-filter: '[skip ci]'
 
       - name: Cache hunter files
