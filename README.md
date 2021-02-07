@@ -4,6 +4,13 @@
 [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/stringbasic/cpp-exercises.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/stringbasic/cpp-exercises/context:cpp)
 
 # To compile
+
+```
+cmake . -B_builds
+cmake --build _builds
+```
+
+Release version with Hunter debugging example:
 ```
 cmake . -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build _builds --config Release
