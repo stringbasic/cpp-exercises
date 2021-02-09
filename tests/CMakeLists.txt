@@ -7,6 +7,7 @@ add_executable(cpp_exercises_tests
   ${tests_SOURCES}
   ../src/UglyNumber.cpp
   ../src/AbundantNumber.cpp
+  ../src/SetExercise.cpp
 )
 target_link_libraries(cpp_exercises_tests PUBLIC GTest::gtest_main)
 add_test(cpp_exercises cpp_exercises_tests)

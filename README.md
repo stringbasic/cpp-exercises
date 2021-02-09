@@ -32,6 +32,7 @@ Usage:
       --isAbundantNumber arg    checks if given number is abundante
       --listAbundantNumbers arg
                                 list abundant numbers until limit given
+      --setExerciseCount arg    set exercise array size
   -h, --help                    print this help
 
 ```

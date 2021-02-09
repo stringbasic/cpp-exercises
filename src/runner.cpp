@@ -3,6 +3,7 @@
 #include "cxxopts.hpp"
 #include "UglyNumber.h"
 #include "AbundantNumber.h"
+#include "SetExercise.h"
 
 using namespace std;
 using namespace cppexercises;
@@ -14,6 +15,7 @@ int main(int argc, char* argv[])
     ("uglyNumber", "checks if given number is ugly", cxxopts::value<int>())
     ("isAbundantNumber", "checks if given number is abundante", cxxopts::value<int>())
     ("listAbundantNumbers", "list abundant numbers until limit given", cxxopts::value<int>())
+    ("setExerciseCount", "set exercise array size", cxxopts::value<int>())
     ("h,help", "print this help")
     ;
 
@@ -55,6 +57,22 @@ int main(int argc, char* argv[])
     for (int i=0; i<result["listAbundantNumbers"].as<int>(); i++)
         if (abundantNumber.isAbundantNumberRecursive(i))
           cout << i << " ";
+    cout << endl;
+  }
+
+  if (result.count("setExerciseCount")) {
+    SetExercise setExercise;
+    int length = result["setExerciseCount"].as<int>();
+    cout << "Input " << length << " operands (1..3) and values: " << endl;
+    while(length--) {
+      int op, value;
+      cin >> op >> value;
+      SetExercise::Reply result = setExercise.process(op, value);
+      if (result == SetExercise::Reply::yes)
+        cout << "Yes" << endl;
+      else if (result == SetExercise::Reply::no)
+        cout << "No" << endl;
+    }
     cout << endl;
   }
 }
