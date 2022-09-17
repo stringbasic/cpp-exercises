@@ -10,9 +10,9 @@ cmake . -B_builds
 cmake --build _builds
 ```
 
-Release version with Hunter debugging example:
+Release version:
 ```
-cmake . -B_builds -DHUNTER_STATUS_DEBUG=ON -DCMAKE_BUILD_TYPE=Release
+cmake . -B_builds -DCMAKE_BUILD_TYPE=Release
 cmake --build _builds --config Release
 ```
 

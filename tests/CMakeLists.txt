@@ -1,5 +1,3 @@
-find_package(GTest CONFIG REQUIRED)
-
 file(GLOB tests_SOURCES "*Test.cpp")
 
 include_directories("../src")

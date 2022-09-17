@@ -20,14 +20,6 @@ jobs:
         with:
           commit-filter: '[skip ci]'
 
-      - name: Cache hunter files
-        if: ${{ env.CI_SKIP == 'false' }}
-        id: cache-hunter
-        uses: actions/cache@v2
-        with:
-          path: ~/.hunter
-          key: ${{ runner.os }}-hunter
-
       - name: Install dependencies
         if: ${{ env.CI_SKIP == 'false' }}
         run: sudo apt install lcov
