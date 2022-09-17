@@ -13,4 +13,5 @@ TEST(NoOutput, SetExercise) {
   EXPECT_EQ(SetExercise::Reply::no, sut.process(3, 14));
   EXPECT_EQ(SetExercise::Reply::none, sut.process(2, 6));
   EXPECT_EQ(SetExercise::Reply::no, sut.process(3, 6));
+  EXPECT_EQ(SetExercise::Reply::none, sut.process(999, 4));
 }
