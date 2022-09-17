@@ -31,7 +31,7 @@ SetExercise::Reply SetExercise::process(int op, int value) {
          return SetExercise::Reply::yes;
        break;
    }
-   return SetExercise::Reply::none;
+   return SetExercise::Reply::unknown;
 }
 
 SetExercise::~SetExercise() {
