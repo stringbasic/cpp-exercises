@@ -15,15 +15,15 @@ SetExercise::SetExercise() {
 
 SetExercise::Reply SetExercise::process(int op, int value) {
    switch (op) {
-     case 1:
+     case SetExercise::Operation::Insert:
        this->numbers.insert(value);
        return SetExercise::Reply::none;
        break;
-     case 2:
+     case SetExercise::Operation::Erase:
        this->numbers.erase(value);
        return SetExercise::Reply::none;
        break;
-     case 3:
+     case SetExercise::Operation::Find:
        set<int>::iterator itr=this->numbers.find(value);
        if (itr == this->numbers.end())
          return SetExercise::Reply::no;

@@ -14,6 +14,7 @@ namespace cppexercises {
   {
   public:
     enum Reply {none, yes, no};
+    enum Operation {Insert=1, Erase=2, Find=3};
     SetExercise();
     ~SetExercise();
 
