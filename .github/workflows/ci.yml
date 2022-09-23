@@ -22,12 +22,14 @@ jobs:
 
       - name: Install dependencies
         if: ${{ env.CI_SKIP == 'false' }}
-        run: sudo apt install -y lcov curl
+        run: sudo apt install -y lcov
 
       - name: Run coverage
         if: ${{ env.CI_SKIP == 'false' }}
         run: ./codecoverage.sh
 
-      - name: Upload coverage report
+      - uses: codecov/codecov-action@v3
         if: ${{ env.CI_SKIP == 'false' }}
-        run: bash <(curl -s https://codecov.io/bash)
+        with:
+          fail_ci_if_error: true
+          verbose: true
