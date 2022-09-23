@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include "UglyNumber.h"
 
 using namespace cppexercises;

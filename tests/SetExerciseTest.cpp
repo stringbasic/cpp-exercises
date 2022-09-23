@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include "SetExercise.h"
 
 using namespace cppexercises;

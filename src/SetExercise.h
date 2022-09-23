@@ -10,19 +10,18 @@
 #include <set>
 
 namespace cppexercises {
-  class SetExercise
-  {
-  public:
-    enum Reply {none, yes, no, unknown};
-    enum Operation {Insert=1, Erase=2, Find=3};
-    SetExercise();
-    ~SetExercise();
+class SetExercise {
+ public:
+  enum Reply { none, yes, no, unknown };
+  enum Operation { Insert = 1, Erase = 2, Find = 3 };
+  SetExercise();
+  ~SetExercise();
 
-    Reply process(int, int);
+  Reply process(int, int);
 
-  private:
-    std::set<int> numbers;
-  };
-}
+ private:
+  std::set<int> numbers;
+};
+}  // namespace cppexercises
 
 #endif /* end of include guard: SETEXERCISE_H */
