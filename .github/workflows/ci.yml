@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         if: ${{ env.CI_SKIP == 'false' }}
-        run: sudo apt install lcov
+        run: sudo apt install -y lcov curl
 
       - name: Run coverage
         if: ${{ env.CI_SKIP == 'false' }}
