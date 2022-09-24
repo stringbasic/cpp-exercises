@@ -27,7 +27,9 @@ bool AbundantNumber::isAbundantNumber(int number) {
         sumDivisors += number / divisor;
     }
   }
-  // test codeql warning
+  // test codeql likely bug
+  int i = 2000000000;
+  long j = i * i;
   if (true)
   {}  // test formating error
   return sumDivisors > number;
