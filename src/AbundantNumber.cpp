@@ -30,9 +30,9 @@ bool AbundantNumber::isAbundantNumber(int number) {
   // test codeql likely bug
   int i = 2000000000;
   long j = i * i;
-  if (true)
-  {}  // test formating error
-  return j+sumDivisors > number;
+  if (i < j != sumDivisors) {
+  }  // test formating error
+  return j + sumDivisors > number;
 }
 
 bool AbundantNumber::isAbundantNumberRecursive(const int &number) {
