@@ -27,12 +27,7 @@ bool AbundantNumber::isAbundantNumber(int number) {
         sumDivisors += number / divisor;
     }
   }
-  // test codeql likely bug
-  int i = 2000000000;
-  long j = i * i;
-  if (i < j != sumDivisors) {
-  }  // test formating error
-  return j + sumDivisors > number;
+  return sumDivisors > number;
 }
 
 bool AbundantNumber::isAbundantNumberRecursive(const int &number) {
