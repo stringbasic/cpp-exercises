@@ -1,5 +1,7 @@
 [![Build Status](https://github.com/stringbasic/cpp-exercises/workflows/CI/badge.svg)](https://github.com/stringbasic/cpp-exercises/actions)
 [![codecov](https://codecov.io/gh/stringbasic/cpp-exercises/branch/master/graph/badge.svg)](https://codecov.io/gh/stringbasic/cpp-exercises)
+[![clang-format Check](https://github.com/stringbasic/cpp-exercises/actions/workflows/clang-format-check.yml/badge.svg)](https://github.com/stringbasic/cpp-exercises/actions/workflows/clang-format-check.yml)
+[![CodeQL](https://github.com/stringbasic/cpp-exercises/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/stringbasic/cpp-exercises/actions/workflows/codeql-analysis.yml)
 
 # To compile
 
