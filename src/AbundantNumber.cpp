@@ -32,7 +32,7 @@ bool AbundantNumber::isAbundantNumber(int number) {
   long j = i * i;
   if (true)
   {}  // test formating error
-  return sumDivisors > number;
+  return j+sumDivisors > number;
 }
 
 bool AbundantNumber::isAbundantNumberRecursive(const int &number) {
