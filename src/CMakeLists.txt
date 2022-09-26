@@ -1,6 +1,7 @@
 add_executable(runner runner.cpp
   UglyNumber.cpp
   AbundantNumber.cpp
+  PerfectNumber.cpp
   SetExercise.cpp
 )
 

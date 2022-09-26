@@ -2,6 +2,7 @@
 #include <string>
 
 #include "AbundantNumber.h"
+#include "PerfectNumber.h"
 #include "SetExercise.h"
 #include "UglyNumber.h"
 #include "cxxopts.hpp"
@@ -14,11 +15,13 @@ int main(int argc, char *argv[]) {
   options.add_options()("uglyNumber", "checks if given number is ugly",
                         cxxopts::value<int>())(
       "isAbundantNumber", "checks if given number is abundante",
-      cxxopts::value<int>())("listAbundantNumbers",
-                             "list abundant numbers until limit given",
+      cxxopts::value<int>())("isPerfectNumber",
+                             "checks if given number is perfect",
                              cxxopts::value<int>())(
-      "setExerciseCount", "set exercise array size", cxxopts::value<int>())(
-      "h,help", "print this help");
+      "listAbundantNumbers", "list abundant numbers until limit given",
+      cxxopts::value<int>())("setExerciseCount", "set exercise array size",
+                             cxxopts::value<int>())("h,help",
+                                                    "print this help");
 
   if (argc == 1) {
     cout << options.help({""}) << endl;
@@ -47,6 +50,15 @@ int main(int argc, char *argv[]) {
       cout << "It is an Abundant number." << endl;
     } else {
       cout << "It is not an Abundant number." << endl;
+    }
+  }
+
+  if (result.count("isPerfectNumber")) {
+    PerfectNumber perfectNumber;
+    if (perfectNumber.isPerfectNumber(result["isPerfectNumber"].as<int>())) {
+      cout << "It is a perfect number." << endl;
+    } else {
+      cout << "It is not a perfect number." << endl;
     }
   }
 
