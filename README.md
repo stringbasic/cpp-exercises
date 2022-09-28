@@ -30,6 +30,7 @@ Usage:
 
       --uglyNumber arg          checks if given number is ugly
       --isAbundantNumber arg    checks if given number is abundante
+      --isPerfectNumber arg     checks if given number is perfect
       --listAbundantNumbers arg
                                 list abundant numbers until limit given
       --setExerciseCount arg    set exercise array size
