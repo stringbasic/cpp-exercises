@@ -10,9 +10,38 @@
 using namespace std;
 using namespace cppexercises;
 
+template <class T>
+class NumberClassifierOption {
+ public:
+  NumberClassifierOption(string name) {
+    this->name = name;
+  }
+
+  string getOption() {
+    return "is" + this->name + "Number";
+  }
+
+  string message(bool result) {
+    if (result) {
+      return "It is an " + this->name + " number.";
+    } else {
+      return "It is not an " + this->name + " number.";
+    }
+  }
+
+  bool classify(const int number) {
+    T classifier;
+    return classifier.classify(number);
+  }
+
+ private:
+  string name;
+};
+
 int main(int argc, char *argv[]) {
+  NumberClassifierOption<UglyNumber> ugly("Ugly");
   cxxopts::Options options("runner", "Run C++ exercises");
-  options.add_options()("uglyNumber", "checks if given number is ugly",
+  options.add_options()(ugly.getOption(), "checks if given number is ugly",
                         cxxopts::value<int>())(
       "isAbundantNumber", "checks if given number is abundante",
       cxxopts::value<int>())("isPerfectNumber",
@@ -34,13 +63,9 @@ int main(int argc, char *argv[]) {
     exit(0);
   }
 
-  if (result.count("uglyNumber")) {
-    UglyNumber uglyNumber;
-    if (uglyNumber.classify(result["uglyNumber"].as<int>())) {
-      cout << "It is an Ugly number." << endl;
-    } else {
-      cout << "It is not an Ugly number." << endl;
-    }
+  if (result.count(ugly.getOption())) {
+    cout << ugly.message(ugly.classify(result[ugly.getOption()].as<int>()))
+         << endl;
   }
 
   if (result.count("isAbundantNumber")) {
