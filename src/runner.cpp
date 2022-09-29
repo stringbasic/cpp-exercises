@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 
   if (result.count("isPerfectNumber")) {
     PerfectNumber perfectNumber;
-    if (perfectNumber.isPerfectNumber(result["isPerfectNumber"].as<int>())) {
+    if (perfectNumber.classify(result["isPerfectNumber"].as<int>())) {
       cout << "It is a perfect number." << endl;
     } else {
       cout << "It is not a perfect number." << endl;
