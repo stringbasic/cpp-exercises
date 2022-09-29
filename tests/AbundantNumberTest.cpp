@@ -20,6 +20,8 @@ TEST(Numbers, IsAbundantNumber) {
       EXPECT_EQ(j == i, abundantNumber.isAbundantNumberRecursive(j))
           << "is abundant recursive failed for " << j << ", should be "
           << (j == i);
+      EXPECT_EQ(j == i, abundantNumber.classify(j))
+          << "classification failed for " << j << ", should be " << (j == i);
     }
   }
 }
