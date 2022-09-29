@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 
   if (result.count("uglyNumber")) {
     UglyNumber uglyNumber;
-    if (uglyNumber.isUglyNumber(result["uglyNumber"].as<int>())) {
+    if (uglyNumber.classify(result["uglyNumber"].as<int>())) {
       cout << "It is an Ugly number." << endl;
     } else {
       cout << "It is not an Ugly number." << endl;
@@ -45,8 +45,7 @@ int main(int argc, char *argv[]) {
 
   if (result.count("isAbundantNumber")) {
     AbundantNumber abundantNumber;
-    if (abundantNumber.isAbundantNumberRecursive(
-            result["isAbundantNumber"].as<int>())) {
+    if (abundantNumber.classify(result["isAbundantNumber"].as<int>())) {
       cout << "It is an Abundant number." << endl;
     } else {
       cout << "It is not an Abundant number." << endl;

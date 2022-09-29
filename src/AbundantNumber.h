@@ -7,17 +7,15 @@
 #ifndef ABUNDANTNUMBER_H
 #define ABUNDANTNUMBER_H
 
+#include "NumberClassifier.h"
+
 namespace cppexercises {
-class AbundantNumber {
+class AbundantNumber : NumberClassifier {
  public:
-  AbundantNumber();
-  ~AbundantNumber();
   bool isAbundantNumber(int);
   bool isAbundantNumberRecursive(const int &n);
   int recursiveNumberAbundance(const int &n, const int &);
-
- private:
-  /* data */
+  bool classify(const int);
 };
 }  // namespace cppexercises
 

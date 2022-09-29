@@ -8,13 +8,8 @@
 
 using namespace cppexercises;
 
-UglyNumber::UglyNumber() {
-}
-
-UglyNumber::~UglyNumber() {
-}
-
-bool UglyNumber::isUglyNumber(int n) {
+bool UglyNumber::classify(const int number) {
+  int n = number;
   if (n <= 0) return false;
   while (n != 1) {
     if (n % 5 == 0) {

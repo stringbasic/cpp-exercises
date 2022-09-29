@@ -7,15 +7,12 @@
 #ifndef UGLYNUMBER_H
 #define UGLYNUMBER_H
 
-namespace cppexercises {
-class UglyNumber {
- public:
-  UglyNumber();
-  ~UglyNumber();
-  bool isUglyNumber(int);
+#include "NumberClassifier.h"
 
- private:
-  /* data */
+namespace cppexercises {
+class UglyNumber : NumberClassifier {
+ public:
+  bool classify(const int);
 };
 }  // namespace cppexercises
 
