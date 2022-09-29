@@ -10,12 +10,6 @@
 
 using namespace cppexercises;
 
-AbundantNumber::AbundantNumber() {
-}
-
-AbundantNumber::~AbundantNumber() {
-}
-
 bool AbundantNumber::isAbundantNumber(int number) {
   int sumDivisors = 0;
   for (int divisor = (sqrt(number)); divisor > 0; divisor--) {
@@ -48,4 +42,8 @@ int AbundantNumber::recursiveNumberAbundance(const int &number,
            this->recursiveNumberAbundance(number, divisor - 1);
   }
   return this->recursiveNumberAbundance(number, divisor - 1);
+}
+
+bool AbundantNumber::classify(const int n) {
+  return this->isAbundantNumber(n);
 }

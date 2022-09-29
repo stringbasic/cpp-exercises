@@ -7,15 +7,12 @@
 #ifndef PERFECTNUMBER_H
 #define PERFECTNUMBER_H
 
-namespace cppexercises {
-class PerfectNumber {
- public:
-  PerfectNumber();
-  ~PerfectNumber();
-  bool isPerfectNumber(int);
+#include "NumberClassifier.h"
 
- private:
-  /* data */
+namespace cppexercises {
+class PerfectNumber : NumberClassifier {
+ public:
+  bool classify(const int);
 };
 }  // namespace cppexercises
 
